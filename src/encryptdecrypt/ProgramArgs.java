@@ -1,5 +1,8 @@
 package encryptdecrypt;
 
+import encryptdecrypt.io.OutputInfo;
+import encryptdecrypt.io.OutputMethod;
+
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -24,8 +27,10 @@ public class ProgramArgs {
         return new ProgramArgs(args);
     }
 
-    public String getOutFile() {
-        return arguments.get("-out");
+    public OutputInfo getOutputInfo() {
+        String outFile = arguments.get("-out");
+        if (outFile != null) return OutputInfo.newInstance(OutputMethod.FILE, outFile);
+        return OutputInfo.newInstance();
     }
 
     public String getAlgorithm() {
@@ -55,8 +60,6 @@ public class ProgramArgs {
     }
 
     public String readDataFrom(String fileName) throws IOException {
-        Path path = Paths.get(fileName);
-        byte[] bytes = Files.readAllBytes(path);
-        return new String(bytes);
+        return new String(Files.readAllBytes(Paths.get(fileName)));
     }
 }

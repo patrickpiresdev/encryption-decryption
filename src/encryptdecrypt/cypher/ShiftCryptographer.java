@@ -1,7 +1,7 @@
 package encryptdecrypt.cypher;
 
 public class ShiftCryptographer extends Cryptographer {
-    public ShiftCryptographer(int key) {
+    private ShiftCryptographer(int key) {
         super(key);
     }
 

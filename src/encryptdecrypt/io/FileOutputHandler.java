@@ -3,12 +3,16 @@ package encryptdecrypt.io;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 
-public class FileOutputMethod implements OutputMethod {
+public class FileOutputHandler implements OutputHandler {
 
     private final String outFile;
 
-    public FileOutputMethod(String outFile) {
+    private FileOutputHandler(String outFile) {
         this.outFile = outFile;
+    }
+
+    public static OutputHandler newInstance(String outFile) {
+        return new FileOutputHandler(outFile);
     }
 
     @Override

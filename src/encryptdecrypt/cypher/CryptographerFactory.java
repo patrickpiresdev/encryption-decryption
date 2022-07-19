@@ -5,7 +5,7 @@ import java.util.Locale;
 public class CryptographerFactory {
     private final int key;
 
-    public CryptographerFactory(int key) {
+    private CryptographerFactory(int key) {
         this.key = key;
     }
 
@@ -14,13 +14,8 @@ public class CryptographerFactory {
     }
 
     public Cryptographer get(String type) {
-        switch (type.toLowerCase(Locale.ROOT)) {
-            case "shift":
-                return ShiftCryptographer.newInstance(key);
-            case "unicode":
-                return UnicodeCryptographer.newInstance(key);
-            default:
-                return null;
-        }
+        if ("unicode".equals(type.toLowerCase(Locale.ROOT)))
+            return UnicodeCryptographer.newInstance(key);
+        return ShiftCryptographer.newInstance(key);
     }
 }

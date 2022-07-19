@@ -3,7 +3,7 @@ package encryptdecrypt.cypher;
 public abstract class Cryptographer {
     protected final int key;
 
-    public Cryptographer(int key) {
+    protected Cryptographer(int key) {
         this.key = key;
     }
 

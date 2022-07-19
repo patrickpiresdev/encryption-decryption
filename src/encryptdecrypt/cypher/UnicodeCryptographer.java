@@ -1,7 +1,7 @@
 package encryptdecrypt.cypher;
 
 public class UnicodeCryptographer extends Cryptographer {
-    public UnicodeCryptographer(int key) {
+    private UnicodeCryptographer(int key) {
         super(key);
     }
 
