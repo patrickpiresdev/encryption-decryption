@@ -1,4 +1,4 @@
-package encryptdecrypt;
+package encryptdecrypt.cypher;
 
 public class UnicodeCryptographer extends Cryptographer {
     public UnicodeCryptographer(int key) {

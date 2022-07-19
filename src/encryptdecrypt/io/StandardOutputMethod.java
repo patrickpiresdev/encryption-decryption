@@ -1,4 +1,4 @@
-package encryptdecrypt;
+package encryptdecrypt.io;
 
 public class StandardOutputMethod implements OutputMethod {
     @Override

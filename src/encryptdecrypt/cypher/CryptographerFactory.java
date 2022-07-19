@@ -1,4 +1,4 @@
-package encryptdecrypt;
+package encryptdecrypt.cypher;
 
 import java.util.Locale;
 

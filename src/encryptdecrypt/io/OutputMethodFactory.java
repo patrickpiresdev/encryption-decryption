@@ -1,4 +1,4 @@
-package encryptdecrypt;
+package encryptdecrypt.io;
 
 public class OutputMethodFactory {
     public static OutputMethod get(String outFile) {

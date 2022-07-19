@@ -1,5 +1,9 @@
 package encryptdecrypt;
 
+import encryptdecrypt.cypher.Cryptographer;
+import encryptdecrypt.io.OutputMethod;
+import encryptdecrypt.io.OutputMethodFactory;
+
 import java.io.IOException;
 
 public class Main {

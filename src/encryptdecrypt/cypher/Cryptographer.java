@@ -1,4 +1,4 @@
-package encryptdecrypt;
+package encryptdecrypt.cypher;
 
 public abstract class Cryptographer {
     protected final int key;
